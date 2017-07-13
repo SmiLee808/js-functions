@@ -25,8 +25,13 @@ console.log(testGreeting); // printing the output value of the function.
  *   @variable Datatype: Number `bango2`
  *
  * These two variables will be used to invoke the functions #2 - #5.
-*/ 
+*/
 
+var bango1 = 5;
+var bango2 = 10; 
+
+//console.log(bango1);
+//console.log(bango2);
 
 
 /*
@@ -45,6 +50,21 @@ console.log(testGreeting); // printing the output value of the function.
 */
 
 
+function add (num1, num2) {
+	return num1 + num2;
+
+}
+
+
+var addNumbers = add(1,2);
+console.log("adding 1+2 =", addNumbers);
+
+var addNumbers2 = add(33,5);
+console.log("adding 33+5 =", addNumbers2);
+
+var addNumbers3 = add(bango1,bango2);
+console.log("adding b1+b2 =", addNumbers3);
+
 
 /*
  * #3
@@ -60,6 +80,16 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log `difference` to test your code.
 */ 
 
+function subtract (num1, num2) {
+	return num1 - num2;
+
+}	
+
+var subNumbers1 = subtract(10,2);
+//	console.log("subtracting 10-2 =", subNumbers1);
+
+var subNumbers2 = subtract(bango1,bango2);
+//	console.log("subtracting b1-b2 =",subNumbers2);
 
 
 /*
@@ -76,7 +106,12 @@ console.log(testGreeting); // printing the output value of the function.
  * Console.log `product` to test your code.
 */
 
+function multiply (num1, num2) {
+	return num1 * num2;
+}
 
+var multiply1 = multiply (7,6);
+console.log("7x6 =", multiply1);
 
 /*
  * #5
