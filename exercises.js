@@ -1,11 +1,12 @@
 /*
+/*
 * A function is a block of code (a series of instructions) designed to execute a certain task. Functions allow you to reuse code.
  
 * i.e. A function to generate a greeting to specific person you designate:*/
 
 // Step One: Define the function.
 function greeting(guest){ // takes in a parameter named 'guest' which acts like a local variable inside the function
- return "Good afternoon " + guest + ".";  // the output value after the function is invoked
+return "Good afternoon " + guest + ".";  // the output value after the function is invoked
 }
 greeting("Mr. Smith"); // invoking or calling the function to execute the code (instructions) inside the function.
 
@@ -56,14 +57,14 @@ function add (num1, num2) {
 }
 
 
-var addNumbers = add(1,2);
-console.log("adding 1+2 =", addNumbers);
+var sum1 = add(1,2);
+//console.log("adding 1+2 =", sum1);
 
-var addNumbers2 = add(33,5);
-console.log("adding 33+5 =", addNumbers2);
+var sum2 = add(33,5);
+//console.log("adding 33+5 =", sum2);
 
-var addNumbers3 = add(bango1,bango2);
-console.log("adding b1+b2 =", addNumbers3);
+var sum3 = add(bango1,bango2);
+//console.log("adding b1+b2 =", sum3);
 
 
 /*
@@ -81,15 +82,15 @@ console.log("adding b1+b2 =", addNumbers3);
 */ 
 
 function subtract (num1, num2) {
-	return num1 - num2;
+  return num1 - num2;
 
 }	
 
-var subNumbers1 = subtract(10,2);
-//	console.log("subtracting 10-2 =", subNumbers1);
+var difference1 = subtract(10,2);
+//	console.log("10-2 =", difference1);
 
-var subNumbers2 = subtract(bango1,bango2);
-//	console.log("subtracting b1-b2 =",subNumbers2);
+var difference2 = subtract(bango1,bango2);
+//	console.log("b1-b2 =",difference2);
 
 
 /*
@@ -107,11 +108,14 @@ var subNumbers2 = subtract(bango1,bango2);
 */
 
 function multiply (num1, num2) {
-	return num1 * num2;
+  return num1 * num2;
 }
 
-var multiply1 = multiply (7,6);
-console.log("7x6 =", multiply1);
+var product1 = multiply (7,6);
+//console.log("7x6 =", product1);
+
+var product2 = multiply (bango1,bango2);
+//console.log("b1,b2 =", product2);
 
 /*
  * #5
@@ -127,6 +131,12 @@ console.log("7x6 =", multiply1);
  * Console.log `quotient` to test your code.
 */
 
+function divide (num1, num2) {
+	return num1/num2;
+}
+
+var quotient1 = divide(10,2);
+console.log("10 /2", quotient1);
 
 
 /*
@@ -141,8 +151,12 @@ console.log("7x6 =", multiply1);
  * Console.log your result.
 */
 
+function checkSum(x){
+	return "Mariah Carey has been Married " + x + " ammount of time.";
 
+}
 
+console.log(checkSum(sum1));
 /*
  * #7
  * Function - checkDifference
@@ -156,7 +170,11 @@ console.log("7x6 =", multiply1);
 */ 
 
 
+function checkDifference(x){
+	return"Last night I dreamt that I ate " + x + " Taco Bell soft tacos.";
+}
 
+console.log(checkDifference(difference1));
 /*
  * #8
  * Function - checkProduct
@@ -168,8 +186,12 @@ console.log("7x6 =", multiply1);
  * Console.log your result.  
 */
 
+function checkProduct(){  //need to include () or we it won't execute the command in the function.
+	return sum1 * product1;
+}
 
-
+var showResults = checkProduct(); 
+console.log("showResults", showResults);
 /*
  * #9
  * Function - checkQuotient
@@ -181,6 +203,11 @@ console.log("7x6 =", multiply1);
  * Console.log your result.  
 */
 
+function checkQuotient(){
+	return product1 * quotient1;
+
+}
+console.log("checkQuotient", checkQuotient());
 
 
 /*
@@ -203,6 +230,22 @@ console.log("7x6 =", multiply1);
  * Console.log your result.
 */ 
 
+var bango3 = 5;
+var bango4 = 6;
+var bango5 = 9;
+
+//V1
+function addThenSubtract(num1, num2, num3){
+	var sum = add(num1, num2);
+	return subtract (sum, num3);
+}
+console.log("addThenSubtract: ", addThenSubtract(bango3, bango4, bango5));
+
+//V2 - this is a more streamlined version... it replaces step: var sum = add(num1, num2) and puts it IN the 1st perameter in V2)
+function addThenSubtract(num1, num2, num3){
+	return subtract (add(num1, num2), num3);
+
+console.log("addThenSubtract: ", addThenSubtract(bango3, bango4, bango5));
 
 
 /*
